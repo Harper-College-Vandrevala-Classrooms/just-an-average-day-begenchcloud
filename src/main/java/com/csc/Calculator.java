@@ -59,5 +59,21 @@ public class Calculator {
   public double averageUsingStream(int[] nums) {
     return Arrays.stream(nums).average().orElseThrow();
   }
+
+  public int[] evensOnly(int[] nums) {
+    return Arrays.stream(nums).filter(num -> num % 2 == 0).toArray();
+}
+
+public int[] oddsOnly(int[] nums) {
+    return Arrays.stream(nums).filter(num -> num % 2 != 0).toArray();
+}
+
+public int[] addFive(int[] nums) {
+    return Arrays.stream(nums).map(num -> num + 5).toArray();
+}
+
+public int[] squareNumbers(int[] nums) {
+    return Arrays.stream(nums).map(num -> num * num).toArray();
+}
   
 }
